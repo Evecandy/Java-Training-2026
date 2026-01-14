@@ -9,13 +9,16 @@ public class BMICalculator {
         System.out.print("Enter your mass in kg: ");
         double mass = scanner.nextDouble();
         System.out.print("Enter your height in centimeters: ");
-        double height = scanner.nextDouble();
+        double heightCm = scanner.nextDouble();
 
-        double bmi = mass / (height * height);
+        double heightM = heightCm / 100;
+
+        double bmi = mass / (heightM * heightM);
 
         System.out.println("\n=== BMI Calculation Result ===");
         System.out.printf("Mass (kg): %.2f\n", mass);
-        System.out.printf("Height (cm): %.2f\n", height);
+        System.out.printf("Height (cm): %.2f\n", heightCm);
+        System.out.printf("Height (m): %.2f\n", heightM);
         System.out.printf("Your BMI is: %.2f\n", bmi);
 
         System.out.print("Category: ");
