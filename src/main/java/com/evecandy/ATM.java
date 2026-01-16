@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class ATM {
     public static void main(String[] args) {
-        System.out.println("ATM functionality is under development.");
         int age;
         String name;
 
-        double balance = 100000.00;
+        double balance;
         double depositAmount;
         double withdrawAmount;
+        final double WITHDRAWAL_FEE = 2.50;
 
-        final double WITHDRAWAL_FEE = 250.00;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         name = scanner.nextLine();
@@ -25,6 +24,8 @@ public class ATM {
         }
 
         System.out.println("Welcome, " + name + "! You are " + age + " years old.");
+        System.out.print("Enter your starting balance: $");
+        double balance = scanner.nextDouble();
         System.out.println("Your current balance is: $" + balance);
         System.out.print("Enter amount to deposit: $");
         depositAmount = scanner.nextDouble();
@@ -35,6 +36,7 @@ public class ATM {
             System.out.println("Invalid deposit amount.");
         }
         System.out.println("Your new balance is: $" + balance);
+
         System.out.print("Enter amount to withdraw: $");
         withdrawAmount = scanner.nextDouble();
         if (withdrawAmount + WITHDRAWAL_FEE > balance) {
@@ -42,9 +44,10 @@ public class ATM {
         } else if (withdrawAmount <= 0) {
             System.out.println("Invalid withdrawal amount.");
         } else {
-            balance -= (withdrawAmount + WITHDRAWAL_FEE);
+            balance = balance - (withdrawAmount + WITHDRAWAL_FEE);
+            System.out.println("Withdrew: $" + withdrawAmount + " (including fee of $" + WITHDRAWAL_FEE + ")");
+
         }
-        System.out.println("Withdrew: $" + withdrawAmount + " (including fee of $" + WITHDRAWAL_FEE + ")");
         System.out.println("Your final balance is: $" + balance);
         scanner.close();
     }
