@@ -7,7 +7,6 @@ public class ATM {
         int age;
         String name;
 
-        double balance;
         double depositAmount;
         double withdrawAmount;
         final double WITHDRAWAL_FEE = 2.50;
