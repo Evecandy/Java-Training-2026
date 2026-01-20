@@ -1,4 +1,4 @@
-package com.evecandy;
+package com.evecandy.loops;
 
 import java.util.Scanner;
 

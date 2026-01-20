@@ -1,4 +1,4 @@
-package com.evecandy;
+package com.evecandy.basicif;
 
 public class BasicIf {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.evecandy;
+package com.evecandy.simplescannerInput;
 
 import java.util.Scanner;
 

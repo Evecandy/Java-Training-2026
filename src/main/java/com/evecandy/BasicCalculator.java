@@ -1,4 +1,4 @@
-package com.evecandy.challenges;
+package com.evecandy;
 
 import java.util.Scanner;
 

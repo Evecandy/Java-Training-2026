@@ -1,4 +1,4 @@
-package com.evecandy;
+package com.evecandy.switchcase;
 
 public class TraditionalSwitch {
     public static void main(String[] args) {

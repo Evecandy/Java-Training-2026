@@ -1,4 +1,4 @@
-package com.evecandy;
+package com.evecandy.Assignment1_EveCandy;
 
 import java.util.Scanner;
 
