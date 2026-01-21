@@ -42,3 +42,6 @@ public class Games {
 // beautiful 😊.
 // Just realized the guessing game says between 1-50 but the random number is
 // between 1-100.
+
+// **** In a menu system with multiple programs, only close Scanner ONCE at the
+// very end of the main menu.****

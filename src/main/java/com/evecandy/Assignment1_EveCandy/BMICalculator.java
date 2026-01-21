@@ -1,4 +1,4 @@
-package com.evecandy.loops;
+package com.evecandy.Assignment1_EveCandy;
 
 import java.util.Scanner;
 
@@ -23,13 +23,13 @@ public class BMICalculator {
 
         System.out.print("Category: ");
         if (bmi < 18.5) {
-            System.out.println("Underweight");
+            System.out.println("Underweight 😲 🍲");
         } else if (bmi >= 18.5 && bmi < 24.9) {
-            System.out.println("Normal weight");
+            System.out.println("Normal weight 😌");
         } else if (bmi >= 25 && bmi < 29.9) {
-            System.out.println("You are Overweight");
+            System.out.println("You are Overweight 🫣 🏋🏾");
         } else {
-            System.out.println("You are Obese");
+            System.out.println("You are Obese 😟 🏋🏾");
         }
         scanner.close();
     }

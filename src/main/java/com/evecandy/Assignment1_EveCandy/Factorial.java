@@ -13,7 +13,12 @@ public class Factorial {
         long factorial = 1;
 
         for (int i = 1; i <= num; i++) {
+            if (factorial > Long.MAX_VALUE / i) {
+                System.out.println("Error: Factorial result exceeds maximum limit for long data type.");
+                return;
+            }
             factorial = factorial * i;
+
         }
         System.out.println(num + "! = " + factorial);
 

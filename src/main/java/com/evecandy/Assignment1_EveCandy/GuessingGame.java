@@ -11,7 +11,7 @@ public class GuessingGame {
         int trials = 5;
 
         System.out.println("Welcome 👋🏾");
-        System.out.println("I'm thinking of a number between 1-50");
+        System.out.println("I'm thinking of a number between 1-100");
         System.out.println("You have " + trials + " chances to guess it.");
 
         while (trials > 0) {
