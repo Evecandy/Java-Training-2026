@@ -1,4 +1,4 @@
-package com.evecandy.loops;
+package com.evecandy.Assignment1_EveCandy;
 
 import java.util.Scanner;
 
@@ -16,7 +16,6 @@ public class Factorial {
             factorial = factorial * i;
         }
         System.out.println(num + "! = " + factorial);
-        scanner.close();
 
     }
 }

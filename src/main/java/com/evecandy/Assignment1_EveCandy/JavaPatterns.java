@@ -46,7 +46,7 @@ public class JavaPatterns {
         } else {
             System.out.println("Invalid choice.");
         }
-        scanner.close();
+
     }
 
 }

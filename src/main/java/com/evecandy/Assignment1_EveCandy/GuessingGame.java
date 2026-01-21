@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class GuessingGame {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         int SecretNumber = (int) (Math.random() * 100) + 1;
         int trials = 5;
 
-        System.out.println("Welcome!");
+        System.out.println("Welcome 👋🏾");
         System.out.println("I'm thinking of a number between 1-50");
         System.out.println("You have " + trials + " chances to guess it.");
 
@@ -34,6 +35,6 @@ public class GuessingGame {
             }
 
         }
-        scanner.close();
+
     }
 }
