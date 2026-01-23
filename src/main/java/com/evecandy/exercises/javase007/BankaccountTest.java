@@ -1,6 +1,6 @@
 package com.evecandy.exercises.javase007;
 
-public class main {
+public class BankaccountTest {
 
     public static void main(String[] args) {
 
