@@ -1,4 +1,4 @@
-package com.evecandy.exercises.javase010polymorphism;
+package com.evecandy.exercises.javase011polymorphism;
 
 // Abstract base class
 public abstract class Notification {

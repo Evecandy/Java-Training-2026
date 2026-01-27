@@ -1,4 +1,4 @@
-package com.evecandy.exercises.javase010polymorphism;
+package com.evecandy.exercises.javase011polymorphism;
 
 public class EmailNotification extends Notification {
     private String subject;
