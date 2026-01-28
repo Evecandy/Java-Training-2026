@@ -52,7 +52,7 @@ public class NotificationManager {
                 System.out.println("--- Test 6: Long SMS Message ---");
                 String longMessage = "This is a very long message that exceeds the standard 160 character limit for SMS messages. "
                                 +
-                                "It will need to be split into multiple parts when sent.Will it really have to be split to different parts when sent? I'll have to confirm that, give me a minute. Yeap! It does exceed the limit.";
+                                "It will need to be split into multiple parts when sent.Will it really have to be split to different parts when sent? I'll have to confirm that, give me a minute. Yeap!.";
                 SMSNotification longSMS = new SMSNotification("+254712345678", longMessage);
                 longSMS.send();
         }
