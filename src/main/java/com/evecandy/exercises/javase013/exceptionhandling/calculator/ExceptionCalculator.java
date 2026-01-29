@@ -44,8 +44,8 @@ public class ExceptionCalculator {
                 System.out.println("----------------------------");
 
             } catch (NumberFormatException e) {
-                System.out.println("Error: That's not a valid number. Please enter digits.");
-                System.out.println("  (Technical details: " + e.getMessage() + ")");
+                System.out.println(ANSI_RED + "Error: That's not a valid number. Please enter digits.");
+                System.out.println("  (Technical details: " + e.getMessage() + ")" + ANSI_RESET);
 
             } catch (ArithmeticException e) {
                 System.out.println(ANSI_RED + "Math Error: " + e.getMessage() + ANSI_RESET);
