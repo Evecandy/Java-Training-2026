@@ -1,4 +1,4 @@
-package com.evecandy.exercises.javase015.ArrayListandList;
+package com.evecandy.exercises.javase015;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -37,7 +37,6 @@ public class StudentManager {
                 .findFirst();
     }
 
-    
     public List<Student> findStudentsByName(String name) {
         return students.stream()
                 .filter(student -> student.getName()
@@ -46,14 +45,12 @@ public class StudentManager {
                 .collect(Collectors.toList());
     }
 
-   
     public List<Student> findStudentsByGrade(String grade) {
         return students.stream()
                 .filter(student -> student.getGrade().equalsIgnoreCase(grade))
                 .collect(Collectors.toList());
     }
 
-    
     public List<Student> getStudentsSortedByName() {
         return students.stream()
                 .sorted((s1, s2) -> s1.getName().compareTo(s2.getName()))
@@ -86,7 +83,6 @@ public class StudentManager {
 
     // DELETE OPERATIONS
 
-    
     public boolean removeStudent(int id) {
         // Java 8 way - removeIf with lambda
         boolean removed = students.removeIf(student -> student.getId() == id);
@@ -100,9 +96,8 @@ public class StudentManager {
         return removed;
     }
 
-    
-     // Removes all students from the system.
-     
+    // Removes all students from the system.
+
     public void clearAllStudents() {
         students.clear();
         System.out.println(" All students cleared from system");
@@ -110,24 +105,20 @@ public class StudentManager {
 
     // UTILITY OPERATIONS
 
-    
     public boolean studentExists(int id) {
         return findStudentById(id).isPresent();
     }
 
-    
     public int getTotalStudents() {
         return students.size();
     }
 
-    
     public boolean isEmpty() {
         return students.isEmpty();
     }
 
     // DISPLAY OPERATIONS
 
-    
     public void displayAllStudents() {
         System.out.println("\n========== ALL STUDENTS ==========");
 
@@ -141,7 +132,6 @@ public class StudentManager {
         System.out.println("==================================\n");
     }
 
-    
     public void displayGradeDistribution() {
         System.out.println("\n========== GRADE DISTRIBUTION ==========");
 
@@ -158,7 +148,6 @@ public class StudentManager {
         System.out.println("========================================\n");
     }
 
-    
     public void displayStudentList(List<Student> studentList, String title) {
         System.out.println("\n--- " + title + " ---");
 

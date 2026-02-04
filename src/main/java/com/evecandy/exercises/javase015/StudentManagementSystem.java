@@ -1,4 +1,4 @@
-package com.evecandy.exercises.javase015.ArrayListandList;
+package com.evecandy.exercises.javase015;
 
 import java.util.Optional;
 import java.util.List;
