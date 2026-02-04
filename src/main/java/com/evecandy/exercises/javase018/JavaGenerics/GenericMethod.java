@@ -1,4 +1,4 @@
-package com.evecandy.exercises.JavaGenerics;
+package com.evecandy.exercises.javase018.JavaGenerics;
 
 public class GenericMethod {
     public static <T> void printArray(T[] inputArray) {
