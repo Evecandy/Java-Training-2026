@@ -25,9 +25,9 @@ public class PensionTracker {
     private static int totalAccountsCreated = 0;
 
     // create instance variables
-    private final String employeeName;
+    private final String employeeName; // can't change after creation
     private final String employeeId;
-    private BigDecimal monthlySalary;
+    private BigDecimal monthlySalary; // Can change (promotions)
     private final TreeMap<Integer, Double> annualInterestRates;
     private final List<MonthlyContribution> contributionHistory;
     private BigDecimal currentBalance;
@@ -44,14 +44,14 @@ public class PensionTracker {
     }
 
     // constructor
-    public PensionTracker(String employeeName, String employeeId, double monthlySalary) {
+    public PensionTracker(String employeeName, String employeeId, BigDecimal monthlySalary) {
         this.employeeName = employeeName;
         this.employeeId = employeeId;
-        this.monthlySalary = BigDecimal.valueOf(monthlySalary).setScale(DECIMAL_SCALE, RoundingMode.HALF_UP);
-        this.annualInterestRates = new TreeMap<>();
-        this.contributionHistory = new ArrayList<>();
-        this.currentBalance = BigDecimal.ZERO;
-        this.accountNumber = ++totalAccountsCreated;
+        this.monthlySalary = monthlySalary.setScale(DECIMAL_SCALE, RoundingMode.HALF_UP); // Round to 2 decimal
+        this.annualInterestRates = new TreeMap<>(); // Empty at start
+        this.contributionHistory = new ArrayList<>(); // Empty list
+        this.currentBalance = BigDecimal.ZERO; // Starts at 0
+        this.accountNumber = ++totalAccountsCreated; // Auto-increments: 1,2,3 ...
 
         System.out.println(" Pension account created for: " + employeeName + " (Account :" + accountNumber + ")");
     }
@@ -61,7 +61,7 @@ public class PensionTracker {
     }
 
     public static void displaySystemInfo() {
-        System.out.println("\n========== Systech Pension System Info ==========");
+        System.out.println("\n==========  Pension System Info ==========");
         System.out.println("Total Pension Accounts: " + totalAccountsCreated);
         System.out
                 .println("Employee Contribution: " + EMPLOYEE_CONTRIBUTION_RATE.multiply(new BigDecimal("100")) + "%");
@@ -281,10 +281,10 @@ public class PensionTracker {
         }
 
         public void display() {
-            System.out.printf("Year %d: %.2f%% (Source: %s)%n",
-                    year, rate * 100, source);
+            System.out.printf("%-10d %-10.2f%% %-20s%n", year, rate * 100, source);
         }
 
+        
         public int getYear() {
             return year;
         }

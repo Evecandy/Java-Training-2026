@@ -28,7 +28,7 @@ public class UniqueWordCounter {
 
         }
 
-        return uniqueWords;
+        return uniqueWords;  //return is for giving data back to whoever called the method.
     }
 
     // METHOD 2: Count unique words using LinkedHashSet
@@ -66,7 +66,7 @@ public class UniqueWordCounter {
             }
         }
 
-        return uniqueWords;
+        return uniqueWords;  
     }
 
     // Removes punctuation and converts to lowercase
