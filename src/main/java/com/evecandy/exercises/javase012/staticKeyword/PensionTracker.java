@@ -32,6 +32,7 @@ public class PensionTracker {
     private final List<MonthlyContribution> contributionHistory;
     private BigDecimal currentBalance;
     private final int accountNumber;
+    private int numberOfAccounts;
 
     static {
         System.out.println("=== Pension Manager ===");
@@ -44,16 +45,21 @@ public class PensionTracker {
     }
 
     // constructor
-    public PensionTracker(String employeeName, String employeeId, BigDecimal monthlySalary) {
+    public PensionTracker(String employeeName, String employeeId, BigDecimal monthlySalary, int accountNumber) {
         this.employeeName = employeeName;
         this.employeeId = employeeId;
         this.monthlySalary = monthlySalary.setScale(DECIMAL_SCALE, RoundingMode.HALF_UP); // Round to 2 decimal
         this.annualInterestRates = new TreeMap<>(); // Empty at start
         this.contributionHistory = new ArrayList<>(); // Empty list
-        this.currentBalance = BigDecimal.ZERO; // Starts at 0
-        this.accountNumber = ++totalAccountsCreated; // Auto-increments: 1,2,3 ...
+        this.currentBalance = BigDecimal.ZERO;
+        this.accountNumber = // Starts at 0
+                this.numberOfAccounts = ++totalAccountsCreated; // Auto-increments: 1,2,3 ...
 
         System.out.println(" Pension account created for: " + employeeName + " (Account :" + accountNumber + ")");
+    }
+
+    public PensionTracker(String employeeName, String employeeId, BigDecimal monthlySalary) {
+        this(employeeName, employeeId, monthlySalary, 0);
     }
 
     public static int getTotalAccountsCreated() {
@@ -284,7 +290,6 @@ public class PensionTracker {
             System.out.printf("%-10d %-10.2f%% %-20s%n", year, rate * 100, source);
         }
 
-        
         public int getYear() {
             return year;
         }

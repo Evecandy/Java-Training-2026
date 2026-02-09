@@ -22,5 +22,6 @@ public class Factorial {
         }
         System.out.println(num + "! = " + factorial);
 
+        scanner.close();
     }
 }
