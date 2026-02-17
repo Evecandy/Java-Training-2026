@@ -20,8 +20,8 @@ public class Factorial {
             factorial = factorial * i;
 
         }
+        scanner.close();
         System.out.println(num + "! = " + factorial);
 
-        scanner.close();
     }
 }
